@@ -1,0 +1,163 @@
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mainContent {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+}
+
+.searchIcon {
+    color: #aaa;
+    margin-right: 8px;
+}
+
+.searchInput {
+    background-color: #252830;
+    border: none;
+    outline: none;
+    padding: 14px;
+    border-radius: 4px;
+    color: white;
+}
+
+.login {
+    background-image: url('https://cpwebassets.codepen.io/assets/logos/codepen-logo-pattern-b477875ac66ffc21e4485a989358c220fac283caf17e602346a50d4250970254.png');
+    background-size: auto;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: calc(100vh - 60px); /* Adjust height based on header */
+}
+
+.credentials {
+    display: flex;
+    width: 950px;
+  
+    padding: 30px;
+    
+    color: #fff;
+}
+
+.socialLogin {
+    flex: 1;
+    text-align: left;
+    padding: 20px;
+}
+
+h1 {
+    margin: 0;
+}
+
+.loginTitle {
+    font-size: 48px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.googleLogin, .githubLogin {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.googleLogin {
+    background-color: #4285F4;
+}
+
+.githubLogin {
+    background-color: #333;
+}
+
+.socialInfo {
+    color: #ddd;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.dividerContainer {
+    display: flex;
+    align-items: center;
+    margin: 0 20px;
+}
+
+.divider {
+    height: 1px;
+    background-color: #555;
+    flex: 1;
+}
+
+.or {
+    margin: 0 10px;
+    color: #aaa;
+    font-weight: bold;
+}
+
+.formLogin {
+    flex: 1;
+    padding: 20px;
+}
+
+.inputField {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 16px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background-color: #252830;
+    color: #ccc;
+}
+
+.loginButton {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #00cc66;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.forgotPassword {
+    display: block;
+    margin-top: 10px;
+    color: #66aaff;
+    text-align: center;
+}
+
+.logo {
+    width: 23px;
+    height: 32px;
+    margin-right: 5px;
+    vertical-align: middle;
+  }
+  

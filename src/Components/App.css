@@ -1,0 +1,20 @@
+.CodeMirror {
+  height: 340px !important;
+  color: #ffffff;
+}
+
+.CodeMirror-gutters {
+  background: #1d1e22 !important;
+}
+
+.CodeMirror-scroll {
+  background: #1d1e22;
+}
+/* Ensure the App container takes full viewport height */
+#root, .App {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden; /* Prevents unwanted scroll bar */
+  display: flex;
+  flex-direction: column;
+}
