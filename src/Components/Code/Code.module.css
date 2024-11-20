@@ -1,6 +1,82 @@
+/* Header Section */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1a1a1a;
+  padding: 16px 24px;
+  border-bottom: 1px solid #333;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.title {
+  font-family: "Montserrat", serif;
+  font-size: 1.5rem;
+  color: #fff;
+  margin: 0;
+}
+
+.codepaletteText{
+  color: antiquewhite;
+  font-size: 1.6rem;
+  line-height: 1.2;
+  font-weight: 100;
+  margin: 0;
+}
+.buttonContainer {
+  display: flex;
+  gap: 16px;
+}
+
+.saveButton,
+.logoutButton {
+  background-color: #ff3c41;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.logoutButton {
+  background-color: #0ebeff;
+}
+
+.saveButton:hover {
+  background-color: #e6323a;
+}
+
+.logoutButton:hover {
+  background-color: #0aa4dc;
+}
+
+/* Editors Section */
 .container {
   background-color: #060606;
   height: 50vh;
   display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px;
+}
 
+/* Result Section */
+.result {
+  background-color: #1a1a1a;
+  height: 50vh;
+  border-top: 1px solid #333;
 }

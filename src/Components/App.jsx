@@ -3,7 +3,8 @@ import './App.css';
 import Login from './Login/Login';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Editor from './Editor/Editor';
-import { Code } from '@mui/icons-material';
+import Code from "../Components/Code/Code"
+import ProSection from './ProSection/ProSection';
 export const DataContext = createContext(null);
 
 const App = () => {
@@ -14,8 +15,12 @@ const App = () => {
       <Login/>, // You can define a home element here
     },
     {
-      path: '/login',
-      element: <Login />,
+      path: '/code',
+      element: <Code />,
+    },
+    {
+      path:'/CodePalatte-Pro',
+      element:<ProSection/>
     }
   ]);
 

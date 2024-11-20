@@ -37,7 +37,7 @@
 
 .button {
   width: 100%;
-  padding: 10px 0;
+  padding: 10px 59px;
   margin: 8px 0;
   background-color: #252830;
   border: 1px solid #444;
@@ -56,7 +56,7 @@
 }
 
 /* Special Style for Start Coding Button */
-.startCodingButton {
+.startCodingButtons {
   background: linear-gradient(135deg, #34a853, #00cc66);
   color: #ffffff;
   font-weight: bold;
@@ -65,15 +65,16 @@
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   position: relative;
   overflow: hidden;
+  padding: 11px 56px;
 }
 
-.startCodingButton:hover {
+.startCodingButtons:hover {
   transform: scale(1.05);
   box-shadow: 0px 4px 15px rgba(52, 168, 83, 0.5);
 }
 
 /* Adding animated shine effect */
-.startCodingButton::before {
+.startCodingButtons::before {
   content: "";
   position: absolute;
   top: 0;
@@ -85,23 +86,18 @@
   transition: 0.5s;
 }
 
-.startCodingButton:hover::before {
+.startCodingButtons:hover::before {
   left: 125%;
   transition: 0.5s;
 }
 
-.button:last-child {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
 
-.button:last-child::after {
+.PalletePro::after {
   content: "PRO";
   background-color: #ffcc00;
   color: black;
   padding: 2px 5px;
   border-radius: 3px;
   font-size: 0.8rem;
-  margin-right: 10px;
+  margin-left: 7px;
 }

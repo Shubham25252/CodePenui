@@ -1,5 +1,5 @@
 import styles from './Dashboard.module.css';
-
+import { Link } from 'react-router-dom';
 const Dashboard = () => {
     return (
         <div className={styles.container}>
@@ -9,12 +9,15 @@ const Dashboard = () => {
                 dePalette
             </h1>
             <p className={styles.subtitle}>Try Our Online Editor</p>
-            <button className={`${styles.button} ${styles.startCodingButton}`}>Start Coding</button>
-            <button className={styles.button}>Search Pens</button>
+           <Link to="/code"><button className={`${styles.button} ${styles.startCodingButtons}`}>Start Coding</button>
+           </Link>
+            <button className={styles.button}>Search Pallete</button>
             <button className={styles.button}>Challenges</button>
             <button className={styles.button}>Create Project</button>
             <button className={styles.button}>About Us</button>
-            <button className={styles.button}>CodePalette</button>
+            <Link to="/CodePalatte-Pro">
+            <button className={`${styles.PalletePro} ${styles.button}`}>CodePalette</button>
+            </Link>
         </div>
     );
 };
