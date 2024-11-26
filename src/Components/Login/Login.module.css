@@ -47,7 +47,7 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: calc(100vh - 60px); /* Adjust height based on header */
+    height:100vh; /* Adjust height based on header */
 }
 
 .credentials {

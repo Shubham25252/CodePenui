@@ -1,11 +1,14 @@
-import { useState, createContext } from 'react';
+
 import './App.css';
 import Login from './Login/Login';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import Editor from './Editor/Editor';
+// import Editor from './Editor/Editor';
 import Code from "../Components/Code/Code"
 import ProSection from './ProSection/ProSection';
-export const DataContext = createContext(null);
+import Context from './ContextFile/Context';
+import Home from '../Home/Home';
+
+
 
 const App = () => {
   const AppRouter = createBrowserRouter([
@@ -21,17 +24,25 @@ const App = () => {
     {
       path:'/CodePalatte-Pro',
       element:<ProSection/>
+    },
+    {
+      path:'/home',
+      element:<Home/>
     }
   ]);
 
-  const [Html, setHtml] = useState('');
-  const [Css, setCss] = useState('');
-  const [JavaScript, setJavaScript] = useState('');
+  // const [Html, setHtml] = useState('');
+  // const [Css, setCss] = useState('');
+  // const [JavaScript, setJavaScript] = useState('');
 
   return (
-    <DataContext.Provider value={{ Html, setHtml, Css, setCss, JavaScript, setJavaScript }}>
-      <RouterProvider router={AppRouter} />
-    </DataContext.Provider>
+    // <DataContext.Provider value={{ Html, setHtml, Css, setCss, JavaScript, setJavaScript }}>
+    //   <RouterProvider router={AppRouter} />
+    // </DataContext.Provider>
+    <Context name="shubham" title="Sharma">
+     
+    <RouterProvider router={AppRouter} />
+    </Context>
   );
 };
 

@@ -1,3 +1,4 @@
+
 import Dashboard from "../Dashborad/Dashboard";
 import Header from "../Header/Header";
 import styles from "./ProSection.module.css";
@@ -5,7 +6,6 @@ import styles from "./ProSection.module.css";
 const ProSection = () => {
   return (
     <div className={styles.container}>
-      <Header/>
       <div className={styles.sidebar}>
         <Dashboard />
       </div>
@@ -18,9 +18,9 @@ const ProSection = () => {
             className={styles.heroImage}
           />
           <div className={styles.textOverlay}>
-            <h1 className={styles.proTitle}>Unlock the Full Power of CodePallete</h1>
+            <h1 className={styles.proTitle}>Unlock the Full Power of CodePalette</h1>
             <h3 className={styles.proDescription}>
-              Get every feature CodePallete has to offer starting at $8/month and
+              Get every feature CodePalette has to offer starting at $8/month and
               start building code faster and easier.
             </h3>
           </div>

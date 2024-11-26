@@ -1,97 +1,99 @@
 .container {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    background-color: #1a1a1a; /* Darker background for better contrast */
-    overflow: hidden;
-    color: #f5f5f5; /* Adjust text color for readability */
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #1a1a1a; /* Darker background for better contrast */
+  overflow: hidden;
+  color: #f5f5f5; /* Adjust text color for readability */
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #333;
+  position: fixed;
+  left: 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  margin-left: 260px; /* Space for the sidebar */
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100% - 60px); /* Adjusted for the header height */
+  position: relative;
+  padding-top: 60px; /* Push content down slightly to clear header */
+}
+
+.heroContainer {
+  position: relative;
+  max-width: 90%;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  margin-top: 20px; /* Add extra spacing below the header */
+}
+
+.heroImage {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.5s ease-in-out;
+}
+
+
+.heroContainer:hover .heroImage {
+  transform: scale(1.05);
+}
+
+.textOverlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* transform: translate(-50%, -50%); */
+  text-align: center;
+  padding: 20px;
+  border-radius: 8px;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.proTitle {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  font-weight: unset;
+  position: relative;
+  color: #1a1a1a;; /* White text for contrast */
+}
+
+.proTitle::after {
+  content: " PRO";
+  font-size: 2.2rem;
+  font-weight: 700;
+  display: inline-block;
+  margin-left: 8px;
+  background-color: #ffcc00;
+  padding: 1px 22px;
+  border-radius: 8px;
+}
+
+.proDescription {
+  color: black;
+  font-family: system-ui;
+  font-weight: lighter;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
   }
-  
-  .sidebar {
-    width: 250px;
-    background-color: #333;
-    position: fixed;
-    left: 0;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  to {
+    opacity: 1;
+    
   }
-  
-  .content {
-    margin-left: 260px; /* Space for the sidebar */
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    position: relative;
-  }
-  
-  .heroContainer {
-    position: relative;
-    max-width: 90%;
-    overflow: hidden;
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-  }
-  
-  .heroImage {
-    width: 100%;
-    height: auto;
-    display: block;
-    object-fit: cover;
-    transition: transform 0.5s ease-in-out;
-  }
-  
-  .heroContainer:hover .heroImage {
-    transform: scale(1.05);
-  }
-  
-  .textOverlay {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    /* transform: translate(-50%, -50%); */
-    text-align: center;
-    padding: 20px;
-    border-radius: 8px;
-    animation: fadeIn 2s ease-in-out;
-  }
-  
-  .proTitle {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-    font-weight: unset;
-    position: relative;
-    color: #1a1a1a;; /* White text for contrast */
-  }
-  
-  .proTitle::after {
-    content: " PRO";
-    font-size: 2.2rem;
-    font-weight: 700;
-    display: inline-block;
-    margin-left: 8px;
-    background-color: #ffcc00;
-    padding: 1px 22px;
-    border-radius: 8px;
-  }
-  
-  .proDescription {
-    color: black;
-    font-family: system-ui;
-    font-weight: lighter;
-  }
-  
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(10px);
-    }
-    to {
-      opacity: 1;
-      
-    }
-  }
-  
+}

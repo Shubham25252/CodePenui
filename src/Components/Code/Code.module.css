@@ -1,4 +1,8 @@
-/* Header Section */
+
+body {
+  font-family: 'Poppins', 'Roboto', sans-serif;
+  color: white;
+}
 .header {
   display: flex;
   justify-content: space-between;

@@ -1,25 +1,30 @@
 import Dashboard from "../Dashborad/Dashboard";
 import styles from "./Login.module.css";
-import { IoIosSearch } from "react-icons/io";
+// import { IoIosSearch } from "react-icons/io";
 import { signInWithPopup } from "firebase/auth";
 import { auth,googleAuthProvider} from "../../Config/firebase";
-
+import { useNavigate } from "react-router-dom";
+import Header from "../Header/Header"
 
 const Login = () => {
+    const navigate = useNavigate();
     const onLogin =async() =>{
         const data= await signInWithPopup(auth, googleAuthProvider);
         console.log(data);   
+        alert("Login successful");
+        navigate("/home");
     };
     return (
         <div className={styles.container}>
             <div className={styles.sidebar}>
                 <Dashboard />
             </div>
-            <div className={styles.mainContent}>
+            {/* <div className={styles.mainContent}>
                 <header className={styles.header}>
-                    <IoIosSearch className={styles.searchIcon} />
+                    <IoIosSearch  />
                     <input type="text" placeholder="Search CodePen..." className={styles.searchInput} />
-                </header>
+                </header> */}             
+                <Header/>
                 <div className={styles.login}>
                     <div className={styles.credentials}>
                         <div className={styles.socialLogin}>
@@ -47,7 +52,7 @@ const Login = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        
     );
 };
 

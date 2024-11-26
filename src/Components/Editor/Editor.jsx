@@ -31,7 +31,7 @@ const Editor = ({ heading, icons, colors, value, onChange }) => {
         value={value}
         onBeforeChange={(editor, data, value) => onChange(value)}
         options={{
-          theme: 'material',
+          theme:"material",
           lineNumbers: true,
         }}
       />

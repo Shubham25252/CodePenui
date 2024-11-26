@@ -1,6 +1,7 @@
 import Editor from "../Editor/Editor";
 import { useContext } from "react";
-import { DataContext } from "../App";
+// import { DataContext } from "../App";
+import { DataContext } from "../ContextFile/Context";
 import styles from "./Code.module.css";
 import Result from "../Result/Result";
 import { useNavigate } from "react-router-dom";
@@ -18,7 +19,7 @@ const Code = () => {
 
   const handleLogout = () => {
     alert("Logged out successfully!");
-    navigate("/login");
+    navigate("/");
   };
 
   return (
