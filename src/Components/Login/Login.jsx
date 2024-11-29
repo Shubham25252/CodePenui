@@ -1,19 +1,22 @@
+import { useContext } from "react";
 import Dashboard from "../Dashborad/Dashboard";
 import styles from "./Login.module.css";
 // import { IoIosSearch } from "react-icons/io";
-import { signInWithPopup } from "firebase/auth";
-import { auth,googleAuthProvider} from "../../Config/firebase";
+// import { signInWithPopup } from "firebase/auth";
+// import { auth,googleAuthProvider} from "../../Config/firebase";
+// import { useNavigate } from "react-router-dom";
+import HeaderForLogin from "./HeaderForLogin ";
 import { useNavigate } from "react-router-dom";
-import Header from "../Header/Header"
+import { DataContext } from "../ContextFile/Context";
+
 
 const Login = () => {
     const navigate = useNavigate();
-    const onLogin =async() =>{
-        const data= await signInWithPopup(auth, googleAuthProvider);
-        console.log(data);   
-        alert("Login successful");
-        navigate("/home");
-    };
+    const {onGoogleLogin}=useContext(DataContext);
+    const onLogin=async() =>{
+        await onGoogleLogin();
+         navigate("/home");
+    }
     return (
         <div className={styles.container}>
             <div className={styles.sidebar}>
@@ -24,7 +27,7 @@ const Login = () => {
                     <IoIosSearch  />
                     <input type="text" placeholder="Search CodePen..." className={styles.searchInput} />
                 </header> */}             
-                <Header/>
+                <HeaderForLogin />
                 <div className={styles.login}>
                     <div className={styles.credentials}>
                         <div className={styles.socialLogin}>

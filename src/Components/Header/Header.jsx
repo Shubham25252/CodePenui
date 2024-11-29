@@ -1,8 +1,11 @@
 import { useState } from "react";
 import styles from "./Header.module.css";
 import { FiSearch } from "react-icons/fi";
+import { useContext } from "react";
+import { DataContext } from "../ContextFile/Context";
 
 const Header = () => {
+  const { userdata } = useContext(DataContext);
   const [showProfile, setShowProfile] = useState(false);
 
   const handleProfileClick = () => {
@@ -21,34 +24,50 @@ const Header = () => {
         />
       </div>
 
-      {/* Profile Bar */}
-      <button className={styles.profileButton} onClick={handleProfileClick}>
-        <img
-          src="src/assets/user.png"
-          alt="User"
-          className={styles.profileImage}
-        />
-        <span>Profile</span>
-      </button>
-
-      {/* Profile Panel */}
-      {showProfile && (
-        <div className={styles.profilePanel}>
-          <h3 className={styles.profileTitle}>User Profile</h3>
+        {/* Profile Button */}
+        <button className={styles.profileButton} onClick={handleProfileClick}>
           <img
-            src="src/assets/user.png"
-            alt="Profile"
-            className={styles.profilePicture}
+            src={userdata.photoURL || "src/assets/default-user.png"} // Default image if no URL is provided
+            alt="User"
+            className={styles.profileImage}
           />
-          <p>
-            <strong>Name:</strong> John Doe
-          </p>
-          <p>
-            <strong>Email:</strong> john.doe@example.com
-          </p>
-          <button>Logout</button>
-        </div>
-      )}
+        </button>
+
+        {/* Profile Panel */}
+        {showProfile && (
+          <div className={styles.profilePanel}>
+            <h3 className={styles.profileTitle}>User Profile</h3>
+            <img
+              src={userdata.photoURL || "src/assets/default-user.png"}
+              alt="Profile"
+              className={styles.profilePicture}
+            />
+            <p className={styles.profileItem}>
+              <img
+                src="src/Components/Header/user.png"
+                alt="User Icon"
+                className={styles.icon}
+              />
+              {userdata.name || "Unknown User"}
+            </p>
+            <p className={styles.profileItem}>
+              <img
+                src="src/Components/Header/gmail.png"
+                alt="Email Icon"
+                className={styles.icon}
+              />
+              {userdata.email || "No Email Available"}
+            </p>
+            <button className={styles.logoutButton}>
+              <img
+                src="src/Components/Header/arrow.png"
+                alt="Logout Icon"
+                className={styles.icon}
+              />
+              Logout
+            </button>
+          </div>
+        )}
     </div>
   );
 };

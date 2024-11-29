@@ -7,7 +7,8 @@ import Code from "../Components/Code/Code"
 import ProSection from './ProSection/ProSection';
 import Context from './ContextFile/Context';
 import Home from '../Home/Home';
-
+import AboutUs from './AboutUs/AboutUs';
+import SavedFiles from './SavedFiles/SavedFiles';
 
 
 const App = () => {
@@ -28,7 +29,15 @@ const App = () => {
     {
       path:'/home',
       element:<Home/>
-    }
+    },
+    {
+      path:'/about',
+      element:<AboutUs/>
+    },
+    {
+      path:'/saved-files',
+      element:<SavedFiles/>  
+    },
   ]);
 
   // const [Html, setHtml] = useState('');
@@ -39,8 +48,7 @@ const App = () => {
     // <DataContext.Provider value={{ Html, setHtml, Css, setCss, JavaScript, setJavaScript }}>
     //   <RouterProvider router={AppRouter} />
     // </DataContext.Provider>
-    <Context name="shubham" title="Sharma">
-     
+    <Context> 
     <RouterProvider router={AppRouter} />
     </Context>
   );

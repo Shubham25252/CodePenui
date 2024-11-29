@@ -84,3 +84,122 @@ body {
   height: 50vh;
   border-top: 1px solid #333;
 }
+
+.profileButton {
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.profileImage {
+  width: 50px; /* Larger image size */
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid #ffaa00;
+}
+
+.profilePanel {
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  background-color: #1a1a1a;
+  color: #f5f5f5;
+  width: 320px;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5);
+  z-index: 100; /* Ensure visibility */
+}
+
+.profileTitle {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  text-align: center;
+  color: #ffcc00;
+  font-weight: bold;
+}
+
+.profilePicture {
+  width: 100px; /* Larger profile image */
+  height: 100px;
+  margin: 0 auto 15px;
+  display: block;
+  border-radius: 50%;
+  border: 3px solid #ffcc00;
+}
+
+.profileItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1rem;
+  margin: 10px 0;
+}
+
+.icon {
+  width: 24px; /* Icon size */
+  height: 24px;
+}
+
+.logoutButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 10px;
+  margin-top: 15px;
+  background: linear-gradient(135deg, #ffcc00, #ffaa00);
+  color: #1a1a1a;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.logoutButton:hover {
+  background: linear-gradient(135deg, #ffaa00, #ff8800);
+}
+
+.container {
+  position: relative; /* Ensures stacking context remains manageable */
+  z-index: 1; /* Lower than the profilePanel's z-index */
+}
+
+.saveButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px; /* Space between icon and text (if any) */
+  background: linear-gradient(135deg, #4caf50, #2e7d32); /* Green gradient */
+  color: #fff;
+  border: none;
+  border-radius: 50px; /* Pill-shaped button */
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.saveButton:hover {
+  background: linear-gradient(135deg, #66bb6a, #388e3c); /* Lighter gradient on hover */
+  transform: translateY(-2px); /* Lift effect */
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.4); /* Stronger shadow on hover */
+}
+
+.saveButton img {
+  width: 24px; /* Icon size */
+  height: 24px;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5)); /* Icon glow effect */
+}
+
+.saveButton:active {
+  transform: translateY(2px); /* Press effect */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Dim shadow */
+}
